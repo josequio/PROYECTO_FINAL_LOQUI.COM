@@ -11,6 +11,8 @@ html{
 body{
    width: 100%;
    height: 100vh;
+   padding: 0;
+   margin: 0;
 }
 .container-header-main{
    min-height: 100vh;
@@ -53,49 +55,35 @@ body{
 .nav_access{}
 /* -----------------MAIN--------------- */
 .main{
-   /* display: flex;
-   justify-content: center;
-   align-items: center; */
    display: grid;
-   grid-template-columns: repeat(3,1fr);
-   grid-template-rows: 1fr 7.25rem;
-   align-items: center;
-   padding: 1rem;
-   border: 1px solid black;
-   height: 100%;
+   grid-template-columns: 1fr 1fr 1fr ;
+   grid-template-rows: 1fr 7rem;
+   grid-template-areas: "title image bottonn"
+                        "footer footer footer";
 }
-.main_title{
-   grid-column: 1/2;
-   grid-row: 1/2;
-   align-self: center;
-   
-}
-.main_h1{
-   
-}
-.main_containerimg{
+.main_titlediv,
+.main_imagediv,
+.main_bottondiv,
+.main_footer{
    justify-self: center;
-   
+   align-self: center
 }
-.main_img{
-}
-.main_a{
-  
-   justify-self: center;
-   background-color: rgba(27, 59, 204, 0.724);
-   color: white;
-   position: sticky;
-   top: 0;
-   /* ------------------ */
-   padding: 1rem 4rem;
-   border-radius: 1rem;
-   text-decoration: none;
 
+.main_titlediv{
+   grid-area: title;
 }
-.main-footer{
-   
-
+.main_h1{}
+.main_imagediv{
+   grid-area: image;
 }
-.main-footer_h2{}
-.main-footer_p{}
+.main_img{}
+.main_bottondiv{
+   grid-area: bottonn;
+}
+.main_a{}
+.main_footer{
+   grid-area: footer;
+}
+.footer_h2{}
+.footer_p{}
 /* ------------------- */
