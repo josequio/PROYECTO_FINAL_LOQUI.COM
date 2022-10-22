@@ -14,10 +14,10 @@ body{
    padding: 0;
    margin: 0;
 }
-.container-header-main{
-   min-height: 100vh;
-   display: grid;
-   grid-template-rows: 4rem auto;
+.container{
+   display: flex;
+   flex-direction: column;
+   
 }
 /* -------------------HEADER------------ */
 .header{
@@ -25,11 +25,12 @@ body{
    top: 0;
    padding: 0 2rem; 
    border: 1px solid black;
-   background-color: rgba(27, 59, 204, 0.724);
+   background-color: rgba(0, 43, 236, 0.94);
    height: 4rem;
    display: flex;
    flex-direction: column;
    justify-content: center;
+   width: 100%;
 }
 .nav{
    font-size: 1.2rem;
@@ -52,38 +53,121 @@ body{
    text-decoration: none;
    color: white;
 }
-.nav_access{}
+.nav_access{
+   text-decoration: none;
+   padding: 0.5rem 1rem;
+   border-radius: 1rem;
+}
 /* -----------------MAIN--------------- */
-.main{
+/* -----------------SECTION: PRESENTATION--------------- */
+
+.presentation{
+   height: calc(100vh - 4rem);
    display: grid;
    grid-template-columns: 1fr 1fr 1fr ;
    grid-template-rows: 1fr 7rem;
    grid-template-areas: "title image bottonn"
                         "footer footer footer";
+   margin-bottom: 2rem;
 }
-.main_titlediv,
-.main_imagediv,
-.main_bottondiv,
-.main_footer{
-   justify-self: center;
-   align-self: center
+.presentation_titlediv,
+.presentation_imagediv,
+.presentation_bottondiv,
+.presentation_footer{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
 }
 
-.main_titlediv{
+.presentation_titlediv{
    grid-area: title;
 }
-.main_h1{}
-.main_imagediv{
+.presentation_h1{}
+.presentation_imagediv{
    grid-area: image;
 }
-.main_img{}
-.main_bottondiv{
+.presentation_img{}
+.presentation_bottondiv{
    grid-area: bottonn;
 }
-.main_a{}
-.main_footer{
-   grid-area: footer;
+.presentation_a{
+   background-color: rgba(0, 43, 236, 0.94);
+   color: white;
+   text-decoration: none;
+   padding: 1rem 4rem;
+   border-radius: 1rem;
 }
-.footer_h2{}
-.footer_p{}
-/* ------------------- */
+.presentation_footer{
+   grid-area: footer;
+   background-color: rgba(0, 43, 236, 0.94);
+   color: white;
+   flex-direction: column;
+}
+.presentation_footer_h2{}
+
+.presentation_footer_p{}
+/* -----------------SECTION: LESSONS--------------- */
+.lessons{
+   display: flex;
+   flex-direction: column;
+   height: calc(100vh - 4rem);
+}
+.container_title{
+   /* border: 1px solid black; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 3rem;
+   /* box-shadow: 0 0 10px ; */
+   
+}
+.lessons_title{}
+
+.container_cards{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   gap: 1rem;
+   flex-wrap: wrap;
+   padding: 3rem;
+}
+.container_cards_2,
+.container_cards_1{
+   display: flex;
+   flex-direction: row;
+   gap: 2rem;
+}
+.container_cards_2{
+
+}
+
+.lessons_article{}
+.card{
+   background-color: whitesmoke;
+   /* border: 1px solid black; */
+   width: 250px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: 1rem;
+   box-shadow: 0 0 10px;
+   padding: 1rem;
+   gap: 1rem;
+}
+.card_img{
+   width: 80px;
+}
+.card_container{
+   transition: 1s;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.card_title{}
+.card_paragraph{
+   text-align: center;
+}

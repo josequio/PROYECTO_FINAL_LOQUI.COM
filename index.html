@@ -1,51 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/main.css">
-    <title>loqui.com</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./styles/main.css">
+   <title>loqui.com</title>
 </head>
+
 <body>
    <div class="container">
-      <div class="container-header-main">
-         <!-- -----------------------------HEADER--------------------------------------- -->
-         <header class="header">
-            <nav class="nav">
-               <a href="" class="nav_pagename">loqui</a>
-               <ul class="nav_ul">
-                  <li class="nav_li"><a href="#" class="nav_a">lecciones</a></li>
-                  <li class="nav_li"><a href="#" class="nav_a">lecciones</a></li>
-                  <li class="nav_li"><a href="#" class="nav_a">lecciones</a></li>
-                  <li class="nav_li"><a href="#" class="nav_a">lecciones</a></li>
-                  <li class="nav_li"><a href="#" class="nav_a">lecciones</a></li>
-               </ul>
-               <button class="nav_access">Acceder</button>
-            </nav>
-         </header>
-         <!-- -----------------------------MAIN--------------------------------------- -->
-         <main class="main">
-            <div class="main_titlediv">
-               <h1 class="main_h1">Aprende ingles en loqui.com</h1>
+      <!-- -----------------------------HEADER--------------------------------------- -->
+      <header class="header">
+         <nav class="nav">
+            <a href="" class="nav_pagename">loqui</a>
+            <ul class="nav_ul">
+               <!-- <li class="nav_li"><a href="#" class="nav_a">Nosotros</a></li>
+                  <li class="nav_li"><a href="#" class="nav_a">Contacto</a></li> -->
+               <li class="nav_li"><a href="#lessons" class="nav_a">Lecciones</a></li>
+               <li class="nav_li"><a href="#" class="nav_a">Aprende con lecturas</a></li>
+               <li class="nav_li"><a href="#" class="nav_a">Regalo del dia</a></li>
+            </ul>
+            <button class="nav_access">Acceder</button>
+         </nav>
+      </header>
+      <!-- -----------------------------MAIN--------------------------------------- -->
+      <main class="main">
+         <!-- ------SECTION: PRESENTATION---------- -->
+         <section class="presentation">
+            <div class="presentation_titlediv">
+               <h1 class="presentation_h1">Aprende ingles en loqui.com</h1>
             </div>
-            <div class="main_imagediv">
-               <img src="./images/loqui.png" alt="perrito loqui" class="main_img">
+            <div class="presentation_imagediv">
+               <img src="./images/loqui.png" alt="perrito loqui" class="presentation_img">
             </div>
-            <div class="main_bottondiv">
-               <a href="#" class="main_a">Comienza hoy!</a>
+            <div class="presentation_bottondiv">
+               <a href="#" class="presentation_a">Comienza hoy!</a>
             </div>
-            <footer class="main_footer">
-               <h2 class="footer_h2">Nunca dejes de crecer</h2>
-               <p class="footer_p">
+            <footer class="presentation_footer">
+               <h2 class="presentation_footer_h2">Nunca dejes de crecer</h2>
+               <p class="presentation_footer_p">
                   Aprende ingles con :
                </p>
             </footer>
-         </main>
-      
-      </div>
-      <!-- ------------------SECTION 1------------- -->
-      
+         </section>
+         <!-- ------SECTION: LESSONS---------- -->
+         <section class="lessons" id="lessons">
+            <div class="container_title">
+               <h2 class="lessons_title">Lecciones</h2>
+            </div>
+            <div class="container_cards">
+               <div class="container_cards_1">
+                  <article class="card lessons_article">
+                     <img src="./images/saludo.png" alt="" class="card_img">
+                     <div class="card_container">
+                        <h2 class="card_title">Saludo</h2>
+                        <p class="card_paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni consequatur molestias exercitationem facilis praesentium quidem.</p>
+                     </div>
+                  </article>
+   
+                  <article class="card lessons_article">
+                     <img src="./images/numeros.png" alt="" class="card_img">
+                     <div class="card_container">
+                        <h2 class="card_title">Números</h2>
+                        <p class="card_paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni consequatur molestias exercitationem facilis praesentium quidem.</p>
+                     </div>
+                  </article>
+                  <article class="card lessons_article">
+                     <img src="./images/oficio.png" alt="" class="card_img">
+                     <div class="card_container">
+                        <h2 class="card_title">Profesiones y Oficios</h2>
+                        <p class="card_paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni consequatur molestias exercitationem facilis praesentium quidem.</p>
+                     </div>
+                  </article>
+               </div>
+               <div class="container_cards_2">
+                  <article class="card lessons_article">
+                     <img src="./images/dias.png" alt="" class="card_img">
+                     <div class="card_container">
+                        <h2 class="card_title">Dias de la Semana</h2>
+                        <p class="card_paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni consequatur molestias exercitationem facilis praesentium quidem.</p>
+                     </div>
+                  </article>
+                  <article class="card lessons_article">
+                     <img src="./images/abecedario.png" alt="" class="card_img">
+                     <div class="card_container">
+                        <h2 class="card_title">Abecedario</h2>
+                        <p class="card_paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni consequatur molestias exercitationem facilis praesentium quidem.</p>
+                     </div>
+                  </article>
+                  <article class="card lessons_article">
+                     <img src="./images/familia.png" alt="" class="card_img">
+                     <div class="card_container">
+                        <h2 class="card_title">Familia</h2>
+                        <p class="card_paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni consequatur molestias exercitationem facilis praesentium quidem.</p>
+                     </div>
+                  </article>
+               </div>
+            </div>
+         </section>
+         <!-- ------------------SECTION 2: READINGS------------- -->
+         section.readings>
+
+      </main>
+
    </div>
 </body>
+
 </html>
