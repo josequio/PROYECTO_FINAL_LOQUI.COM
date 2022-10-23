@@ -127,30 +127,24 @@ body{
 .presentation_footer_h2{}
 
 .presentation_footer_p{}
-/* -----------------SECTION: LESSONS--------------- */
-.lessons{
-   
-}
+/* -----------------SECTION: LESSONS y READINGS--------------- */
+.lessons{}
+.readings{}
+.readings_container,
 .lessons_container{
-   /* display: flex;
-   flex-direction: column;
-   min-height: calc(100% - 4rem);
-   margin-top: 2rem;
-   justify-content: center;
-   align-items: center; */
    display: flex;
    flex-direction: column;
    align-items: center;
 }
-.container_title{
+.container_subtitle{
    /* border: 1px solid black; */
    display: flex;
    justify-content: center;
    align-items: center;
    height: 3rem;
-   /* box-shadow: 0 0 10px ; */
-   
+   /* box-shadow: 0 0 10px ; */ 
 }
+.readings_title{}
 .lessons_title{}
 
 .container_cards{
@@ -164,33 +158,6 @@ body{
    gap: 2rem;
 
 }
-/* .container_cards_2,
-.container_cards_1{
-   display: flex;
-   flex-direction: row;
-   gap: 2rem;
-} */
-/* .container_cards_2{
-
-} */
-/* .lessons_article1{
-   grid-area: lesson1;
-}
-.lessons_article2{
-   grid-area: lesson2;
-}
-.lessons_article3{
-   grid-area: lesson3;
-}
-.lessons_article4{
-   grid-area: lesson4;
-}
-.lessons_article5{
-   grid-area: lesson5;
-}
-.lessons_article6{
-   grid-area: lesson6;
-} */
 .card{
    background-color: whitesmoke;
    /* border: 1px solid black; */
@@ -220,13 +187,24 @@ body{
    text-align: center;
 }
 .card_button{
-   background-color: rgba(0, 43, 236, 0.94);
+   background-color: rgb(150 157 189 / 94%);
    color: white;
    text-decoration: none;
    padding: 0.5rem 1rem;
    border-radius: 0.5rem;
    /* font-size: 1rem; */
+   transition: .6s;
 }
+.card_button:hover{
+   background-color: rgba(23, 63, 238, 0.94);
+   transition: .5s;
+   
+}
+.button-boxshadow:hover{
+   box-shadow: 0 0 20px;
+   transition: .5s;
+}
+.readings_container-more,
 .lessons_container-more{
    display: flex;
    flex-direction: row;
@@ -235,7 +213,11 @@ body{
 }
 
 
+
+/* -------------------media querys ---------------*/
+ /* Media query usado para: presentación de la página */
 @media (max-width: 768px){
+    /* diseño de presentación para tablet y celular */
    .presentation{
       min-height: calc(100vh - 4rem);
       display: grid;
@@ -247,6 +229,7 @@ body{
       "buttonn buttonn buttonn"
       "footer footer footer";
    }
+   /* Para diseño tablet y celular desaparecen tres cards de las secciones lessons y readings */
    .lessons_article4,
    .lessons_article5,
    .lessons_article6{
