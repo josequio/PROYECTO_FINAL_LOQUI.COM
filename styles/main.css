@@ -2,6 +2,8 @@ html{
     font-size: 16px;
     box-sizing: border-box;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
 }
 *,::after,::before{
    padding: 0;
@@ -9,18 +11,25 @@ html{
    box-sizing: inherit;
 }
 body{
-   width: 100%;
-   height: 100vh;
+   /* width: 100%; */
+   height: 100%;
    padding: 0;
    margin: 0;
 }
 .container{
-   display: flex;
-   flex-direction: column;
+   /* display: flex;
+   flex-direction: column; */
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 4rem 1fr;
+   grid-template-areas: "header"
+                        "main";
+   /* min-width: 100%; */
    
 }
 /* -------------------HEADER------------ */
 .header{
+   grid-area: header;
    position: sticky;
    top: 0;
    padding: 0 2rem; 
@@ -30,13 +39,14 @@ body{
    display: flex;
    flex-direction: column;
    justify-content: center;
-   width: 100%;
+    
 }
 .nav{
    font-size: 1.2rem;
    display: flex;
    gap: 20px;
    justify-content:space-between;
+   /* width: 100%; */
 }
 .nav_pagename{
    text-decoration: none;
@@ -60,39 +70,47 @@ body{
 }
 /* -----------------MAIN--------------- */
 /* -----------------SECTION: PRESENTATION--------------- */
-
+.main{
+   grid-area: main;
+}
 .presentation{
-   height: calc(100vh - 4rem);
+   min-height: calc(100vh - 4rem);
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr ;
+   grid-template-columns: repeat(3,1fr);
    grid-template-rows: 1fr 7rem;
-   grid-template-areas: "title image bottonn"
+   grid-template-areas: "title image buttonn"
                         "footer footer footer";
-   margin-bottom: 2rem;
 }
 .presentation_titlediv,
 .presentation_imagediv,
-.presentation_bottondiv,
+.presentation_buttondiv,
 .presentation_footer{
    display: flex;
    justify-content: center;
    align-items: center;
-   width: 100%;
-   height: 100%;
+   /* width: 100%; */
+   /* height: 100%; */
 }
 
 .presentation_titlediv{
    grid-area: title;
+  
 }
-.presentation_h1{}
+.presentation_h1{
+}
 .presentation_imagediv{
    grid-area: image;
+   background-image: url(/images/loqui.png);
+   background-size:contain;
+   background-position: center;
+   background-repeat: no-repeat;
 }
 .presentation_img{}
-.presentation_bottondiv{
-   grid-area: bottonn;
+.presentation_buttondiv{
+   margin: 1rem;
+   grid-area: buttonn;
 }
-.presentation_a{
+.presentation_button{
    background-color: rgba(0, 43, 236, 0.94);
    color: white;
    text-decoration: none;
@@ -104,15 +122,25 @@ body{
    background-color: rgba(0, 43, 236, 0.94);
    color: white;
    flex-direction: column;
+   padding: 1rem;
 }
 .presentation_footer_h2{}
 
 .presentation_footer_p{}
 /* -----------------SECTION: LESSONS--------------- */
 .lessons{
+   
+}
+.lessons_container{
+   /* display: flex;
+   flex-direction: column;
+   min-height: calc(100% - 4rem);
+   margin-top: 2rem;
+   justify-content: center;
+   align-items: center; */
    display: flex;
    flex-direction: column;
-   height: calc(100vh - 4rem);
+   align-items: center;
 }
 .container_title{
    /* border: 1px solid black; */
@@ -126,30 +154,50 @@ body{
 .lessons_title{}
 
 .container_cards{
-   display: flex;
-   flex-direction: row;
-   justify-content: space-evenly;
-   gap: 1rem;
-   flex-wrap: wrap;
-   padding: 3rem;
+   width: 65%;
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+   grid-auto-rows: 280px;
+   /* grid-template-areas: "lesson1 lesson2 lesson3"
+                        "lesson4 lesson5 lesson6"; */
+   margin: 1rem 4rem;              
+   gap: 2rem;
+
 }
-.container_cards_2,
+/* .container_cards_2,
 .container_cards_1{
    display: flex;
    flex-direction: row;
    gap: 2rem;
-}
-.container_cards_2{
+} */
+/* .container_cards_2{
 
+} */
+/* .lessons_article1{
+   grid-area: lesson1;
 }
-
-.lessons_article{}
+.lessons_article2{
+   grid-area: lesson2;
+}
+.lessons_article3{
+   grid-area: lesson3;
+}
+.lessons_article4{
+   grid-area: lesson4;
+}
+.lessons_article5{
+   grid-area: lesson5;
+}
+.lessons_article6{
+   grid-area: lesson6;
+} */
 .card{
    background-color: whitesmoke;
    /* border: 1px solid black; */
-   width: 250px;
+   /* max-width: 350px; 
+   min-width: 250px; */
    display: flex;
-   flex-direction: column;
+   flex-direction: column; 
    justify-content: center;
    align-items: center;
    border-radius: 1rem;
@@ -170,4 +218,39 @@ body{
 .card_title{}
 .card_paragraph{
    text-align: center;
+}
+.card_button{
+   background-color: rgba(0, 43, 236, 0.94);
+   color: white;
+   text-decoration: none;
+   padding: 0.5rem 1rem;
+   border-radius: 0.5rem;
+   /* font-size: 1rem; */
+}
+.lessons_container-more{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+
+@media (max-width: 768px){
+   .presentation{
+      min-height: calc(100vh - 4rem);
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows:repeat(auto-fit,1fr);
+      grid-template-areas: 
+      "image image image"
+      "title title title"
+      "buttonn buttonn buttonn"
+      "footer footer footer";
+   }
+   .lessons_article4,
+   .lessons_article5,
+   .lessons_article6{
+      display: none;
+   }
+   
 }
