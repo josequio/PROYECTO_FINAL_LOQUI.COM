@@ -78,6 +78,7 @@ body{
    padding: 0.5rem 1rem;
    border-radius: 1rem;
    font-size: 1rem;
+   cursor: pointer;
    
 }
 /* -----------------MAIN--------------- */
@@ -130,6 +131,12 @@ body{
    text-decoration: none;
    padding: 1rem 4rem;
    border-radius: 1rem;
+   transition: 0.7s;
+}
+.presentation_button:hover{
+   transition: 0.7s;
+   background-color:  #efd416;
+   color: #004aad;
 }
 .presentation_footer{
    grid-area: footer;
