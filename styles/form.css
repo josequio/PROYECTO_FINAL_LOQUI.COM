@@ -2,7 +2,7 @@
     box-shadow: 0 0 10px;
     max-width: 600px;
     min-width: 350px;
-    margin: auto;
+    margin: 1rem;
 }
 .form, fieldset{
     display: flex;

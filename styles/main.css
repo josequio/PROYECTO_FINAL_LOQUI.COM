@@ -10,6 +10,11 @@ html{
    margin: 0;
    box-sizing: inherit;
 }
+:root{
+   --bgColor-main: rgb(0 74 173);
+    
+}
+
 body{
    /* width: 100%; */
    height: 100%;
@@ -27,6 +32,7 @@ body{
    /* min-width: 100%; */
    
 }
+
 /* -------------------HEADER------------ */
 .header{
    grid-area: header;
@@ -34,27 +40,31 @@ body{
    top: 0;
    padding: 0 2rem; 
    border: 1px solid black;
-   background-color: rgba(0, 43, 236, 0.94);
-   height: 4rem;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-    
+   background-color: var(--bgColor-main);
+   /* height: 4rem;
+   line-height: 4rem; */
+   /* min-width: 100%; */
 }
 .nav{
+   width: 100%;
+   height: 100%;
    font-size: 1.2rem;
    display: flex;
    gap: 20px;
    justify-content:space-between;
-   /* width: 100%; */
+   align-items: center
 }
 .nav_pagename{
    text-decoration: none;
    color: white;
+   font-size: 1.5rem;
+   font-weight: 700;
 }
 .nav_ul{
    display: flex;
+   flex-direction: row;
    gap:2rem;
+   font-size: 1.2rem;
 }
 .nav_li{
    list-style: none;
@@ -67,6 +77,8 @@ body{
    text-decoration: none;
    padding: 0.5rem 1rem;
    border-radius: 1rem;
+   font-size: 1rem;
+   
 }
 /* -----------------MAIN--------------- */
 /* -----------------SECTION: PRESENTATION--------------- */
@@ -94,7 +106,9 @@ body{
 
 .presentation_titlediv{
    grid-area: title;
-  
+   font-size: 1.8rem;
+   font-weight: 700;
+   text-align: center;
 }
 .presentation_h1{
 }
@@ -111,7 +125,7 @@ body{
    grid-area: buttonn;
 }
 .presentation_button{
-   background-color: rgba(0, 43, 236, 0.94);
+   background-color: var(--bgColor-main);
    color: white;
    text-decoration: none;
    padding: 1rem 4rem;
@@ -119,7 +133,7 @@ body{
 }
 .presentation_footer{
    grid-area: footer;
-   background-color: rgba(0, 43, 236, 0.94);
+   background-color: var(--bgColor-main);
    color: white;
    flex-direction: column;
    padding: 1rem;
@@ -146,6 +160,8 @@ body{
    justify-content: center;
    align-items: center;
    height: 3rem;
+   width: 100%;
+   background-color: #efd416;
    /* box-shadow: 0 0 10px ; */ 
 }
 .readings_title{}
@@ -186,7 +202,9 @@ body{
    justify-content: center;
    align-items: center;
 }
-.card_title{}
+.card_title{
+   text-align: center;
+}
 .card_paragraph{
    text-align: center;
 }
@@ -200,7 +218,7 @@ body{
    transition: .6s;
 }
 .card_button:hover{
-   background-color: rgba(23, 63, 238, 0.94);
+   background-color: var(--bgColor-main);
    transition: .5s;
    
 }
@@ -215,9 +233,13 @@ body{
    justify-content: center;
    align-items: center;
 }
-/*-- ------------------SECTION 3: GIFT-------------  */
+/*-- ------------------SECTION 3: GIFT------------- */
 .gift{ 
    height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 .gift_container{
    display: flex;
@@ -226,6 +248,7 @@ body{
    align-items: center;
    height: 100%;
    gap: 5rem;
+   width: 60%;
 }
 .gift_container_subtitle{}
 .gift_button{
@@ -233,11 +256,24 @@ body{
    background-color: white;
    cursor: pointer;
 }
-.gift_button{
-   border: none;
-   background-color: white;
+.gift_background-card{
+   background-image: url(/images/gift-fondo.jpg);
+   background-size: cover;
+   height: 20rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 .gift_container-img{}
+.gift_surprise{
+   /* width: 20rem;
+   height: 20rem; */
+}
+.gift_paragraph{
+   font-size: 2rem;
+   color: white;
+   font-weight: 700;
+}
 /*-- ------------------SECTION 4: ADVISORY-------------  */
 .advisory{}
 .advisory_subtitle{
@@ -250,7 +286,7 @@ body{
    grid-auto-rows: 1fr;
 }
 .teachers-container{
-   background-color: aqua;
+   background-color: #004aad;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -262,7 +298,7 @@ body{
    min-width: 350px;
 }
 .form-container{
-   background-color: bisque;
+   background-color: #fffffe;
    display: flex;
    flex-direction: row;
    justify-content: center;
@@ -336,4 +372,6 @@ body{
       align-items: center;
       transition: 1s;
    }
+   
+   
 }
