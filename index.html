@@ -6,6 +6,10 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="./styles/form.css">
    <link rel="stylesheet" href="./styles/main.css">
    <title>loqui.com</title>
 </head>
@@ -274,16 +278,70 @@
          </section>
          <!-- ------------------SECTION 4: ADVISORY------------- -->
          <section class="advisory" id="advisory">
+            <div class="container_subtitle advisory_subtitle ">
+               <h2 class="advisory_title">¿Necesitas de una asesoría?</h2>
+            </div>
             <div class="advisory_container">
+               <!-- ------------TEACHERS------- -->
                <div class="teachers-container">
-                  
+                  <article class="card teacher-card">
+                     <img src="./images/usuario.png" alt="" class="card_img">
+                     <div class="card_container">
+                        <h2 class="card_title">Docentes de Ingles</h2>
+                        <p class="card_paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni
+                           consequatur molestias exercitationem facilis praesentium quidem.</p>
+                     </div>
+
+                  </article>
                </div>
+               <!-- ---------FORMULARIO ------- -->
                <div class="form-container">
-                  
+                  <form class="form">
+                     <fieldset>
+                       <label for="first-name">
+                         <input id = 'first-name' type="text" placeholder="First Name" required class="form-input">
+                       </label>
+             
+                       <label for="last-name">
+                         <input id="last-name" type="text" placeholder="Last Name" required class="form-input">
+                       </label>
+             
+                       <label for="email">
+                         <input id="email" type="email" placeholder="Email Address" required class="form-input">
+                       </label>
+             
+                       <!-- <label for="password">
+                         <input id="password" type="password" placeholder="Password" required pattern="[a-z0-5]{8,}" class="form-input">
+                       </label> -->
+             
+                     </fieldset>
+             
+                     <input type="submit" value="SUBMIT" class="form_submit" />
+             
+                     <p class="form_foot-description"> 
+                       <strong><a href="#" class="form_terms">Terms and Services</a> </strong>
+                       <input id="terms-and-conditions" type="checkbox" required class="terms-and-conditions">
+                     </p>
+                   </form>
                </div>
             </div>
          </section>
       </main>
+      <footer class="footer">
+         <div class="container_footer">
+            <div class="container_footer-nocopy">
+               <div class="footer_title">
+                  <a href="#" class="footer_title-a nav_pagename">loqui</a>
+               </div>
+               <div class="footer_job">
+                  <a href="#" class="footer_job-a card_button">Se un docente en loqui.com</a>
+               </div>
+               <div class="footer_social">Redes sociales</div>
+            </div>
+            <hr class="footer_hr">
+            <div class="footer_copy">Cpyright &copy; 2022 José Gabriel Quio Sanchez Todos los derechos Reservados</div>
+         </div>
+      </footer>
 
 
    </div>
