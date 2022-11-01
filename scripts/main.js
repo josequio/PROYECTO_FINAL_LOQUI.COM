@@ -16,3 +16,11 @@ gift_button.addEventListener('click',function(e){
        
     }
 });
+
+// --------------------------navegation--------
+const nav_ul = document.querySelector('.nav_ul');
+const nav_button = document.querySelector('.nav_button');
+
+nav_button.addEventListener('click',()=>{
+    nav_ul.classList.toggle('activo');
+});

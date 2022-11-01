@@ -11,7 +11,7 @@ html{
    box-sizing: inherit;
 }
 :root{
-   --bgColor-main: rgb(0 74 173);
+   --bgColor-main: #004aad;;
     
 }
 
@@ -26,9 +26,10 @@ body{
    flex-direction: column; */
    display: grid;
    grid-template-columns: 1fr;
-   grid-template-rows: 4rem 1fr;
+   grid-template-rows: 4rem 1fr auto;
    grid-template-areas: "header"
-                        "main";
+                        "main"
+                        "footer_page";
    /* min-width: 100%; */
    
 }
@@ -36,23 +37,27 @@ body{
 /* -------------------HEADER------------ */
 .header{
    grid-area: header;
-   position: sticky;
+   position: fixed;
    top: 0;
-   padding: 0 2rem; 
+   padding: 1rem 2rem; 
    border: 1px solid black;
    background-color: var(--bgColor-main);
    /* height: 4rem;
    line-height: 4rem; */
    /* min-width: 100%; */
+   width: 100%;
 }
+/* --------------nav------------ */
 .nav{
    width: 100%;
    height: 100%;
    font-size: 1.2rem;
    display: flex;
-   gap: 20px;
+   flex-flow: row wrap;
    justify-content:space-between;
-   align-items: center
+   align-items: center;
+   gap: 20px;
+
 }
 .nav_pagename{
    text-decoration: none;
@@ -60,12 +65,24 @@ body{
    font-size: 1.5rem;
    font-weight: 700;
 }
+.nav_button{
+   display: none;
+}
+
+.nav_svg{
+   width: 2rem;
+   height: 2rem;
+}
+.container_nav-ul{
+   display: flex;
+}
 .nav_ul{
    display: flex;
    flex-direction: row;
    gap:2rem;
    font-size: 1.2rem;
 }
+
 .nav_li{
    list-style: none;
 }
@@ -79,7 +96,6 @@ body{
    border-radius: 1rem;
    font-size: 1rem;
    cursor: pointer;
-   
 }
 /* -----------------MAIN--------------- */
 /* -----------------SECTION: PRESENTATION--------------- */
@@ -88,11 +104,13 @@ body{
 }
 .presentation{
    min-height: calc(100vh - 4rem);
+   transition: 0.5s;
    display: grid;
    grid-template-columns: repeat(3,1fr);
-   grid-template-rows: 1fr 7rem;
+   grid-template-rows: 1fr 0.3fr;
    grid-template-areas: "title image buttonn"
                         "footer footer footer";
+   
 }
 .presentation_titlediv,
 .presentation_imagediv,
@@ -314,6 +332,7 @@ body{
 
 /*-- ------------------FOOTER-------------  */
 .footer{
+   grid-area: footer_page;
    background-color: rgb(16, 15, 15);
    color: white;
    
@@ -353,6 +372,7 @@ body{
     /* diseño de presentación para tablet y celular */
    .presentation{
       min-height: calc(100vh - 4rem);
+      transition: 1s;
       display: grid;
       grid-template-columns: repeat(3,1fr);
       grid-template-rows:repeat(auto-fit,1fr);
@@ -361,6 +381,7 @@ body{
       "title title title"
       "buttonn buttonn buttonn"
       "footer footer footer";
+      
    }
    /* Para diseño tablet y celular desaparecen tres cards de las secciones lessons y readings */
    .readings_article4,
@@ -377,8 +398,31 @@ body{
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      transition: 1s;
+      
    }
-   
-   
+}
+@media screen and (max-width: 700px){
+   .nav{
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+   }
+   .nav .nav_ul{
+      display: inherit;
+      flex-flow: column;
+      align-items: center;
+      
+   }
+   .container-responsive_nav-pagename{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+   }
+   .nav_button{
+      display: block;
+   }
+   .nav_ul.activo{
+      
 }
