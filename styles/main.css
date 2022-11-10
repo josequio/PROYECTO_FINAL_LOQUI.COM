@@ -31,7 +31,11 @@ body{
                         "main"
                         "footer_page";
    /* min-width: 100%; */
-   
+   background-image: url(/images/bg/bg_edificios.jpg);
+   background-size:auto;
+   background-position: center;
+   background-repeat: no-repeat;
+   min-width: 370px;
 }
 
 /* -------------------HEADER------------ */
@@ -164,8 +168,29 @@ body{
    padding: 1rem;
 }
 .presentation_footer_h2{}
-
-.presentation_footer_p{}
+.container_footer_change{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+}
+.container_footer_change{
+   
+}
+.presentation_footer_p1{
+}
+.presentation_footer_change{
+   width: 350px;
+   font-weight: bold;
+   font-size: 1.5rem;
+   background: #f7f6f6;
+   padding: 1rem;
+   color: var(--bgColor-main);
+   /* border-radius: 10px; */
+   text-align: center;
+   box-shadow: 0 0 0px;
+}
 /* -----------------SECTION: LESSONS y READINGS--------------- */
 .lessons{
    min-height: 100vh;
@@ -280,10 +305,13 @@ body{
    border: none;
    background-color: white;
    cursor: pointer;
+   background-color: transparent
 }
 .gift_background-card{
-   background-image: url(/images/gift-fondo.jpg);
-   background-size: cover;
+   background-image: url(/images/bg/bg_gift.jpg);
+   background-size: auto;
+   background-repeat: no-repeat;
+   background-position: center;
    height: 20rem;
    display: flex;
    justify-content: center;
@@ -298,6 +326,9 @@ body{
    font-size: 2rem;
    color: white;
    font-weight: 700;
+}
+.card_gift{
+   background-color: transparent;
 }
 /*-- ------------------SECTION 4: ADVISORY-------------  */
 .advisory{}
@@ -423,6 +454,18 @@ body{
    .nav_button{
       display: block;
    }
+   .nav_access.activo,
    .nav_ul.activo{
-      
+      display: none;
+   }
+
 }
+
+/*@media screen and (max-width: 390px){
+   .container_footer_change{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   } 
+} */
